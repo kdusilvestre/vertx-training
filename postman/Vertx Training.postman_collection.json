@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "8febe3f7-2ba1-4bc4-9018-ec198a8221ec",
+		"name": "Vertx Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getThreadInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:8443/threadInfo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"threadInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "keepBusy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:8443/keepBusy",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"keepBusy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eventBus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:8443/eventBus",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"eventBus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eventBusDelay",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:8443/eventBusDelay",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"eventBusDelay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:8443/block",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"block"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

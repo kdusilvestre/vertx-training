@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'vertxTraining'
+version '1.0-SNAPSHOT'
+
+application { mainClassName = "Run" }
+
+sourceCompatibility = 1.8
+
+version = '3.8.1'
+sourceCompatibility = '1.8'
+
+dependencies {
+    compile "io.vertx:vertx-core:$version"
+    compile "io.vertx:vertx-web:$version"
+    compile "com.google.code.gson:gson:2.8.5"
+    compile "io.rest-assured:rest-assured:4.0.0"
+    compile "io.projectreactor:reactor-core:3.2.5.RELEASE"
+    implementation 'io.netty:netty-tcnative-boringssl-static:2.0.25.Final'
+    compile "com.google.guava:guava:r05"
+}
+
+task runEventloop (type: JavaExec, dependsOn: 'classes') {
+    description = "Deploying eventloop verticles + background verticle"
+    group = "Application"
+    main = 'Run'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    systemProperty "VERTX_MODE" , "e"
+    systemProperty "VERTX_INSTANCES" , "5"
+}
+
+task runWorker (type: JavaExec, dependsOn: 'classes') {
+    description = "Deploying worker verticles"
+    group = "Application"
+    main = 'Run'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    systemProperty "VERTX_MODE" , "w"
+    systemProperty "VERTX_INSTANCES" , "1000"
+}
