@@ -27,7 +27,7 @@ After restarting, now we have to make it work with the ALPN library:
 3. Set $JAVA_HOME to the path of the jdk /Contents/Home
 4. Get the alpn-boot jar in your home directory (under */Users/adsid* )
 5. Open the jmeter shell (jmeter.sh) script and add these 2 lines towards the top of the script:
-JVM_ARGS="-Xbootclasspath/p:*/Users/adsid*/alpn-boot-8.1.13.v20181017.jar"
+JVM_ARGS="-Xbootclasspath/p:*/Users/id*/alpn-boot-8.1.13.v20181017.jar"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/"
 
 How to make sure it's working?
